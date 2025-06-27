@@ -8,8 +8,12 @@ gdjs.Game_32SceneCode.GDWater_9595PassableObjects1= [];
 gdjs.Game_32SceneCode.GDWater_9595PassableObjects2= [];
 gdjs.Game_32SceneCode.GDObstacle_9595ImpassableObjects1= [];
 gdjs.Game_32SceneCode.GDObstacle_9595ImpassableObjects2= [];
+gdjs.Game_32SceneCode.GDViewObjects1= [];
+gdjs.Game_32SceneCode.GDViewObjects2= [];
 
 
+gdjs.Game_32SceneCode.mapOfGDgdjs_9546Game_959532SceneCode_9546GDPlayerObjects1Objects = Hashtable.newFrom({"Player": gdjs.Game_32SceneCode.GDPlayerObjects1});
+gdjs.Game_32SceneCode.mapOfGDgdjs_9546Game_959532SceneCode_9546GDViewObjects1Objects = Hashtable.newFrom({"View": gdjs.Game_32SceneCode.GDViewObjects1});
 gdjs.Game_32SceneCode.eventsList0 = function(runtimeScene) {
 
 {
@@ -33,6 +37,21 @@ gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.Game_32SceneCode.GDPlayer
 }
 
 
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.Game_32SceneCode.GDPlayerObjects1);
+gdjs.copyArray(runtimeScene.getObjects("View"), gdjs.Game_32SceneCode.GDViewObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Game_32SceneCode.mapOfGDgdjs_9546Game_959532SceneCode_9546GDPlayerObjects1Objects, gdjs.Game_32SceneCode.mapOfGDgdjs_9546Game_959532SceneCode_9546GDViewObjects1Objects, false, runtimeScene, false);
+if (isConditionTrue_0) {
+{gdjs.evtTools.window.openURL("https://phoenix-techwizards.github.io/TripleWin/", runtimeScene);
+}}
+
+}
+
+
 };
 
 gdjs.Game_32SceneCode.func = function(runtimeScene) {
@@ -46,6 +65,8 @@ gdjs.Game_32SceneCode.GDWater_9595PassableObjects1.length = 0;
 gdjs.Game_32SceneCode.GDWater_9595PassableObjects2.length = 0;
 gdjs.Game_32SceneCode.GDObstacle_9595ImpassableObjects1.length = 0;
 gdjs.Game_32SceneCode.GDObstacle_9595ImpassableObjects2.length = 0;
+gdjs.Game_32SceneCode.GDViewObjects1.length = 0;
+gdjs.Game_32SceneCode.GDViewObjects2.length = 0;
 
 gdjs.Game_32SceneCode.eventsList0(runtimeScene);
 gdjs.Game_32SceneCode.GDGround_9595TilemapObjects1.length = 0;
@@ -56,6 +77,8 @@ gdjs.Game_32SceneCode.GDWater_9595PassableObjects1.length = 0;
 gdjs.Game_32SceneCode.GDWater_9595PassableObjects2.length = 0;
 gdjs.Game_32SceneCode.GDObstacle_9595ImpassableObjects1.length = 0;
 gdjs.Game_32SceneCode.GDObstacle_9595ImpassableObjects2.length = 0;
+gdjs.Game_32SceneCode.GDViewObjects1.length = 0;
+gdjs.Game_32SceneCode.GDViewObjects2.length = 0;
 
 
 return;
